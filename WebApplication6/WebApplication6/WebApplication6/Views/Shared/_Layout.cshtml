@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+ 
+   
+
+    <title>@ViewBag.Title - Foodie Haven</title>
+    <link rel="stylesheet" href="~/Content/StyleSheet1.css" />
+</head>
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js"></script>
+
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="@Url.Action("Index", "Home")">Foodie Haven</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="@Url.Action("Index", "Home")">Home</a></li>
+                    <li><a href="@Url.Action("Index", "Menu")">Menu</a></li>
+                    <li><a href="@Url.Action("Index", "About")">About Us</a></li>
+                    <li><a href="@Url.Action("Index", "Contact")">Contact</a></li>
+                    <li><a href="@Url.Action("Login", "Account")">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="content">
+        @RenderBody() <!-- This is where the content of the individual views will be rendered -->
+    </div><br />
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; @DateTime.Now.Year - My Foodie Haven. All Rights Reserved.</p>
+            <nav>
+                <ul class="footer-links">
+                    <li><a href="@Url.Action("Index", "Home")">Home</a></li>
+                    <li><a href="@Url.Action("Index", "Menu")">Menu</a></li>
+                    <li>@Html.ActionLink("About Us", "Index", "About")</li>
+                    <li><a href="@Url.Action("Index", "Contact")">Contact</a></li>
+                    <li><a href="@Url.Action("Login", "Account")">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,35 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";  // Reference to the shared layout (if you are using one)
+}
+
+<div class="homepage-banner">
+    <h1>Welcome to Our Food Haven!</h1>
+    <p>Explore our delicious dishes and order online for quick delivery!</p>
+</div>
+
+<div class="featured-section">
+    <h2>Our Featured Dishes</h2>
+    <div class="featured-items">
+        <div class="item">
+            <img src="~/Content/Images/gujratithali.jpg" alt="GujratiThali">
+            <h3>Gujrati Thali</h3>
+            <p>A Gujarati Thali is a traditional and wholesome meal that offers a wide variety of dishes from the Indian state of Gujarat. Known for its vibrant flavors, the Gujarati Thali is a perfect blend of sweet, savory, and spicy tastes, typically served on a large plate with multiple small bowls. Each thali offers a delightful balance of different food groups, making it both nutritious and delicious.</p>
+        </div>
+        <div class="item">
+            <img src="~/Content/Images/panjabithali.jpg" alt="Burger">
+            <h3>Punjabi Thali</h3>
+            <p>A Punjabi Thali is a hearty and robust meal that reflects the bold and vibrant flavors of Punjab, a region known for its rich culinary heritage. The thali typically consists of a combination of vegetarian and sometimes non-vegetarian dishes, all centered around a base of flatbreads and rice, with indulgent gravies, tangy pickles, creamy curd, and a sweet treat to complete the experience.</p>
+        </div>
+        <div class="item">
+            <img src="~/Content/Images/southindian.jpg" alt="Pasta">
+            <h3>South Indian</h3>
+            <p>A South Indian Thali is a vibrant and diverse meal that represents the flavors of South India, typically consisting of a variety of dishes served together on a large platter. This meal is balanced with rice, various curries, sambar, rasam, pickles, and sweets, offering a delightful mix of textures and flavors — from spicy and tangy to sweet and mild.</p>
+        </div>
+    </div>
+</div>
+
+<div class="cta-section">
+    <h2>Order Now</h2>
+    <p>Explore our menu and place your order for fast delivery or pickup.</p>
+    <a href="@Url.Action("Index", "Menu")" class="order-now-btn">View Menu</a>
+</div>

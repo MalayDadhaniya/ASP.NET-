@@ -1,0 +1,54 @@
+﻿@*@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+@model IEnumerable<WebApplication6.Models.MenuItem>
+
+<h2>Menu</h2>
+
+<div class="menu-container">
+    @if (Model != null && Model.Any())
+    {
+        foreach (var item in Model)
+        {
+            <div class="menu-item">
+                <img src="@item.ImageUrl" alt="@item.Name" class="menu-item-image" />
+                <h3>@item.Name</h3>
+                <p>@item.Description</p>
+                <p><strong>Price:</strong> $@item.Price</p>
+                <p><strong>Category:</strong> @item.Category</p>
+            </div>
+        }
+    }
+    else
+    {
+        <p>No menu items available.</p>
+    }
+</div>
+
+<style>
+    .menu-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .menu-item {
+        border: 1px solid #ccc;
+        padding: 20px;
+        width: 300px;
+        margin: 20px;
+        text-align: center;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .menu-item-image {
+        max-width: 100%;
+        height: auto;
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 10px;
+    }
+</style>
+*@

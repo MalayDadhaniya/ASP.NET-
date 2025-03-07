@@ -1,0 +1,68 @@
+﻿@model FoodWebsite.Models.ContactModel
+
+@{
+    ViewBag.Title = "Contact Us";
+}
+
+<!-- Modern Contact Page Design using Bootstrap -->
+<div class="container mt-5">
+    <h2 class="text-center">Contact Us</h2>
+
+    @if (ViewBag.Message != null)
+    {
+        <div class="alert alert-success">
+            @ViewBag.Message
+        </div>
+    }
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                @Html.LabelFor(m => m.Name)
+                @Html.TextBoxFor(m => m.Name, new { @class = "form-control", placeholder = "Your Name" })
+                @Html.ValidationMessageFor(m => m.Name, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group col-md-6">
+                @Html.LabelFor(m => m.Email)
+                @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "Your Email" })
+                @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.Message)
+            @Html.TextAreaFor(m => m.Message, new { @class = "form-control", rows = 5, placeholder = "Your Message" })
+            @Html.ValidationMessageFor(m => m.Message, "", new { @class = "text-danger" })
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg btn-block">Send Message</button>
+    }
+</div>
+
+<style>
+    /* Custom Contact Form CSS */
+    .container {
+       
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+        color: #333;
+        margin-bottom: 30px;
+    }
+
+    .btn-primary {
+        background-color: #3498db;
+        border-color: pink;
+    }
+
+        .btn-primary:hover {
+            background-color: mediumpurple;
+        }
+
+</style>

@@ -1,0 +1,167 @@
+﻿/* Homepage Banner Section */
+.homepage-banner {
+    background-color: black; /* Replace with your image URL */
+    background-size: cover; /* Ensures the image covers the entire div */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    height: 400px; /* Set a height to ensure the background is visible */
+    color: white; /* Ensures text is readable on the background */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+
+    .homepage-banner h1 {
+        font-size: 48px;
+        margin-bottom: 20px;
+    }
+
+    .homepage-banner p {
+        font-size: 24px;
+    }
+
+/* Featured Dishes Section */
+.featured-section {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.featured-items {
+    display: flex;
+    justify-content: space-around;
+}
+
+    .featured-items .item {
+        width: 30%;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+        .featured-items .item img {
+            width: 100%;
+            height: auto;
+        }
+
+        .featured-items .item h3 {
+            margin: 15px 0 10px;
+        }
+
+        .featured-items .item p {
+            color: #555;
+        }
+
+/* CTA Section */
+.cta-section {
+    text-align: center;
+    background-color: #f8f8f8;
+    /*padding: 50px 0;*/
+}
+
+    .cta-section h2 {
+        font-size: 36px;
+    }
+
+    .cta-section p {
+        font-size: 20px;
+    }
+
+.order-now-btn {
+    display: inline-block;
+    background-color: #ff9900;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+    .order-now-btn:hover {
+        background-color: #e68a00;
+    }
+/* Header Styling */
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+    header .container {
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header .logo a {
+        font-size: 24px;
+        color: white;
+        text-decoration: none;
+    }
+
+    header nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+
+        header nav ul li {
+            margin-left: 20px;
+        }
+
+            header nav ul li a {
+                color: white;
+                text-decoration: none;
+                padding: 10px 20px;
+            }
+
+                header nav ul li a:hover {
+                    background-color: #555;
+                    border-radius: 5px;
+                }
+/* Footer Styles */
+.footer {
+    background-color: #444; /* Dark background for footer */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-links {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+    .footer-links li {
+        display: inline;
+        margin: 0 15px;
+    }
+
+    .footer-links a {
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+.menu-image {
+    width: 200px; /* Set desired width */
+    height: 150px; /* Set desired height */
+    object-fit: cover; /* This will ensure the images are cropped to fit the defined dimensions */
+}
